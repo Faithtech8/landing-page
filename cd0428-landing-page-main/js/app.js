@@ -71,9 +71,9 @@ scrolling();
  */
 
 // Build menu
-document.querySelector(section).scrollIntoView({
-  behavior: "smooth",
-});
+document.querySelector(section).scrollIntoView{
+  behavior: 'smooth'
+};
 
 // Scroll to section on link click
 const addActive = (conditional, section) => {
