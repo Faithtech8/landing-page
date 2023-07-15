@@ -71,7 +71,8 @@ scrolling();
  */
 
 // Build menu
-document.querySelector(section).scrollIntoView{
+document.querySelector(sections
+    ).scrollIntoView{
   behavior: 'smooth'
 };
 
