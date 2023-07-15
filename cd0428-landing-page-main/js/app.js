@@ -39,13 +39,13 @@ const sections = document.querySelectorAll("section");
 
 // build the nav
 const navBuilder = () => {
+  let navUI = "";
   sections.forEach((section) => {
-    let navUI = "";
     const sectionID = section.id;
     const sectionDataNav = section.dataset.nav;
     navUI += `<li><a class = "menu__link" href="#${sectionID}">${sectionDataNav}</a></li>;`;
-    navigation.append(navUI);
   });
+  navigation.innerHTML = navUI;
 };
 navBuilder();
 // Add class 'active' to section when near top of viewport
@@ -71,7 +71,15 @@ scrolling();
  */
 
 // Build menu
+document.querySelector(section).scrollIntoView({
+  behavior: "smooth",
+});
 
 // Scroll to section on link click
+const addActive = (conditional, section) => {
+  if (conditional) {
+    section.classList.add("your-active-class");
+  }
+};
 
 // Set sections as active
