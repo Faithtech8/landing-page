@@ -55,10 +55,11 @@ const offset = (section) => {
 
 // Scroll to anchor ID using scrollTO event
 const scrolling = () => {
-  const links = document.querySelectorAll(".navbar_menu a");
-  links.forEach((link, indek) => {
-    link.addEventListener("click", () => {
-      for (i = 0; i < sections; i++) {
+  const links = document.querySelectorAll(".navbar__menu a");
+  links.forEach((link, index) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      for (i = 0; i < sections.length; i++) {
         sections[index].scrollIntoView({
           behavior: "smooth",
         });
