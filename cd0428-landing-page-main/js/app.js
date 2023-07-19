@@ -56,9 +56,13 @@ const offset = (section) => {
 // Scroll to anchor ID using scrollTO event
 const scrolling = () => {
   const links = document.querySelectorAll(".navbar_menu a");
-  links.forEach((link) => {
+  links.forEach((link, indek) => {
     link.addEventListener("click", () => {
-      for (i = 0; i < sections; i++) {}
+      for (i = 0; i < sections; i++) {
+        sections[index].scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     });
   });
 };
@@ -71,10 +75,6 @@ scrolling();
  */
 
 // Build menu
-document.querySelector(sections
-    ).scrollIntoView{
-  behavior: 'smooth'
-};
 
 // Scroll to section on link click
 const addActive = (conditional, section) => {
