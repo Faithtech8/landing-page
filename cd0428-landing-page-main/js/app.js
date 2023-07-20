@@ -1,7 +1,3 @@
-ed code with improvements in the comments and code formatting:
-
-js
-Copy code
 /**
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
@@ -84,5 +80,3 @@ const setActiveSections = () => {
 
 // Listen for scroll events and update active sections
 document.addEventListener("scroll", setActiveSections);
-
-
