@@ -74,7 +74,7 @@ window.addEventListener("scroll", highlightActiveSection);
 
 // Scroll to anchor ID using scrollIntoView event
 const scrollToSection = () => {
-  const links = document.querySelectorAll(".menu__link");
+  const links = document.querySelectorAll(".menu__link")};
 
   links.forEach((link, index) => {
     link.addEventListener("click", (event) => {
