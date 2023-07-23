@@ -73,7 +73,7 @@ navLinks.forEach((link) => {
 window.addEventListener("scroll", highlightActiveSection);
 
 // Scroll to anchor ID using scrollIntoView event
-const scrollToSection = () => {
+function scrollToSection = () => {
   const links = document.querySelectorAll(".menu__link")};
 
   links.forEach((link, index) => {
@@ -98,8 +98,7 @@ const scrollToSection = () => {
     
     
     
-    '
-})
+    
 
 
 /**
