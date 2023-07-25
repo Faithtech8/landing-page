@@ -14,8 +14,8 @@
 /**
  * Global Variables
  */
-const navMenu = document.getElementById("navbar__list");
-const sections = document.querySelectorAll("section");
+const navMenu = document.getElementById('navbar__list');
+const sections = document.querySelectorAll('section');
 /**
  * Helper Functions
  */
@@ -74,22 +74,25 @@ window.addEventListener("scroll", highlightActiveSection);
 
 // Scroll to anchor ID using scrollIntoView event
 const scrollToSection = () => {
-  const links = document.querySelectorAll(".menu__link")};
+  const links = document.querySelectorAll('.menu__link')};
 
-  links.forEach((link, index) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault(
-      }});
+  links.forEach((link,index) =>{
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
 
-      const section = document.getElementById(
-        link.getAttribute("href").slice(1)
-      );
+        const section =document.getElementById(link
+          link.getAttribute('href').slice(1)
+          );
+        });
+      });
+    
       
-    
-    
-    
-  
 
+
+
+      
+      
+  
 
 // Call the function to enable smooth scrolling to anchor IDs
 
@@ -140,9 +143,3 @@ const setSectionActive = (section) => {
   }
 };
 
-window.scrollBy ({
-    top; 100,
-    left; 0,
-    behavior; 'smooth'
-
-});
