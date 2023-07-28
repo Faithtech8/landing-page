@@ -14,8 +14,8 @@
 /**
  * Global Variables
  */
-const navMenu = document.getElementById('navbar__list');
-const sections = document.querySelectorAll('section');
+const navMenu = document.getElementById("navbar__list");
+const sections = document.querySelectorAll("section");
 /**
  * Helper Functions
  */
@@ -63,46 +63,26 @@ function highlightActiveSection() {
   });
 }
 
-// Attach click event to navigation links
-const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach((link) => {
-  link.addEventListener("click", scrollToAnchor);
-});
-
 // Attach scroll event to highlight active section
 window.addEventListener("scroll", highlightActiveSection);
 
 // Scroll to anchor ID using scrollIntoView event
-const scrollToSection = () => {
-  const links = document.querySelectorAll('.menu__link')};
+const scrollToSection = (event) => {
+  event.preventDefault();
+  const link = event.target;
 
-  links.forEach((link,index) =>{
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
+  const section = document.getElementById(link.getAttribute("href").slice(1));
 
-        const section =document.getElementById(link
-          link.getAttribute('href').slice(1)
-          );
-        });
-      });
-    
-      
+  section.scrollIntoView({ behavior: "smooth" });
+};
 
-
-
-      
-      
-  
+// Attach click event to navigation links
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", scrollToSection);
+});
 
 // Call the function to enable smooth scrolling to anchor IDs
-
-  
-    
-    
-    
-    
-    
-
 
 /**
  * Events
@@ -142,4 +122,3 @@ const setSectionActive = (section) => {
     section.classList.remove("your-active-class");
   }
 };
-
