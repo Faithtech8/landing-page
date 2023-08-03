@@ -49,14 +49,24 @@ function highlightActiveSection() {
     const sectionHeight = section.clientHeight;
     const scrollPosition = window.scrollY;
 
+
+    *//remove any existing  classes
+
+section.classList.remove('your-active-class');
+
     if (
       scrollPosition >= sectionTop &&
       scrollPosition < sectionTop + sectionHeight
     ) {
-      navLinks.forEach((link) => {
+      *//add class to section that is in view
+
+    section.classList.remove('your-active-class');
+
+          navLinks.forEach((link) => {
         link.classList.remove("active");
-        if (link.getAttribute("href") === `#${section.id}`) {
-          link.classList.add("active");
+
+          if (link.getAttribute('href') === `#${section.id}`) {
+          link.classList.add('active');
         }
       });
     }
@@ -82,4 +92,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", scrollToSection);
 });
 
-// Call the function to enable smooth scrolling to anchor IDs
+    
+   
+
+
