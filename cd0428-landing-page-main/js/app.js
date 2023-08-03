@@ -20,8 +20,6 @@ const sections = document.querySelectorAll("section");
  * Helper Functions
  */
 
-// Calculate offset from the top of the viewport
-
 /**
  * Main Functions
  */
@@ -83,13 +81,13 @@ const scrollToSection = (event) => {
 
   const section = document.getElementById(link.getAttribute("href").slice(1));
 
-  section.scrollIntoView({ behavior: "smooth" });
+  section.scrollIntoView({ behavior: 'smooth'});
 };
 
 // Attach click event to navigation links
-const navLinks = document.querySelectorAll("nav a");
+const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach((link) => {
-  link.addEventListener("click", scrollToSection);
+  link.addEventListener('click', scrollToSection);
 });
 
     
