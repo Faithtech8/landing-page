@@ -47,24 +47,22 @@ function highlightActiveSection() {
     const sectionHeight = section.clientHeight;
     const scrollPosition = window.scrollY;
 
+    //remove any existing  classes
 
-    *//remove any existing  classes
-
-section.classList.remove('your-active-class');
+    section.classList.remove("your-active-class");
 
     if (
       scrollPosition >= sectionTop &&
       scrollPosition < sectionTop + sectionHeight
     ) {
-      *//add class to section that is in view
+      //add class to section that is in view
+      section.classList.add("your-active-class");
 
-    section.classList.remove('your-active-class');
+      navLinks.forEach((link) => {
+        link.classList.add("active");
 
-          navLinks.forEach((link) => {
-        link.classList.remove("active");
-
-          if (link.getAttribute('href') === `#${section.id}`) {
-          link.classList.add('active');
+        if (link.getAttribute("href") === `#${section.id}`) {
+          link.classList.add("active");
         }
       });
     }
@@ -81,16 +79,11 @@ const scrollToSection = (event) => {
 
   const section = document.getElementById(link.getAttribute("href").slice(1));
 
-  section.scrollIntoView({ behavior: 'smooth'});
+  section.scrollIntoView({ behavior: "smooth" });
 };
 
 // Attach click event to navigation links
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => {
-  link.addEventListener('click', scrollToSection);
+  link.addEventListener("click", scrollToSection);
 });
-
-    
-   
-
-

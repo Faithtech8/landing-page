@@ -206,6 +206,10 @@ section.your-active-class .landing__container::before {
 section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
+    
+    .active {
+        background-color: red;
+       
 }
 
 /* Section Active Styles Keyframe Animations */
@@ -220,8 +224,6 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 
-                   .active {
-                    background-color: red;
                    }
 
                   
