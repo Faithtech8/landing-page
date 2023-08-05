@@ -47,6 +47,9 @@ function highlightActiveSection() {
     const sectionHeight = section.clientHeight;
     const scrollPosition = window.scrollY;
 
+    //get where the halfway point is
+    const halfViewportHeight = window.innerHeight / 2;
+
     //remove any existing  classes
 
     section.classList.remove("your-active-class");
@@ -59,7 +62,7 @@ function highlightActiveSection() {
       section.classList.add("your-active-class");
 
       navLinks.forEach((link) => {
-        link.classList.add("active");
+        link.classList.remove("active");
 
         if (link.getAttribute("href") === `#${section.id}`) {
           link.classList.add("active");
